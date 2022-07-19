@@ -13,7 +13,7 @@ pipeline {
         snykSecurity(
           snykInstallation: 'snyk@latest',
           snykTokenId: 'Id_Snyk_Cred',
-		  snyk code
+		  
 		  )
       }
     }
