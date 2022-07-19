@@ -7,17 +7,7 @@ pipeline {
         //echo 'Building...'
       //}
     //}
-    stage('Test_Snyk') {
-      steps {
-        echo 'Testing...'
-        snykSecurity(
-          snykInstallation: 'snyk@latest',
-          snykTokenId: 'Id_Snyk_Cred',
-		  
-	)
-      }
-    }
-	stage('Test_Kiuwan') {
+   stage('Test_Kiuwan') {
       steps {
         echo 'Testing...'
 		kiuwan connectionProfileUuid: '5PIH-WqhL',
@@ -26,6 +16,16 @@ pipeline {
 			unstableThreshold: 90.0
 	  }
     }
+   stage('Test_Snyk') {
+      steps {
+        echo 'Testing...'
+        snykSecurity(
+          snykInstallation: 'snyk@latest',
+          snykTokenId: 'Id_Snyk_Cred',
+	)
+      }
+    }
+    
     //stage('Deploy') {
       //steps {
         //echo 'Deploying...'
