@@ -26,6 +26,16 @@ pipeline {
         !OSADependencies.json, !**/node_modules/**/*''', fullScanCycle: 10, generatePdfReport: true, groupId: '53', password: '{AQAAABAAAAAQmjNhbGgdCpMZP4oyrcwv38pEN1QExKMCWZ7TLlhmstw=}', preset: '36', projectName: 'Pipeline_Seguridad', sastEnabled: true, serverUrl: 'https://cxprivatecloud.checkmarx.net/', sourceEncoding: '6', useOwnServerCredentials: true, username: '', vulnerabilityThresholdResult: 'FAILURE', waitForResultsEnabled: true])
 	  }
     }
+	  
+    stage('Test_Kiuwan') {
+      steps {
+        echo 'Testing Kiuwan...'
+	kiuwan applicationName: 'PIPELINE_SEGURIDAD', applicationName_dm: 'PIPELINE_SEGURIDAD', 
+		connectionProfileUuid: '5PIH-WqhL', label: '', label_dm: '', measure: 'EFFORT_TO_TARGET', 
+		selectedMode: 'DELIVERY_MODE', sourcePath: '/'
+	  }
+    }
+	  
     stage('Test_Snyk') {
       steps {
         echo 'Testing Snyk...'
@@ -36,15 +46,6 @@ pipeline {
       }
     }
 	  
-   stage('Test_Kiuwan') {
-      steps {
-        echo 'Testing Kiuwan...'
-	kiuwan applicationName: 'PIPELINE_SEGURIDAD', applicationName_dm: 'PIPELINE_SEGURIDAD', 
-		connectionProfileUuid: '5PIH-WqhL', label: '', label_dm: '', measure: 'EFFORT_TO_TARGET', 
-		selectedMode: 'DELIVERY_MODE', sourcePath: '/'
-	  }
-    }
-
     
     //stage('Deploy') {
       //steps {
