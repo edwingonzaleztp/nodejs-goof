@@ -26,16 +26,7 @@ pipeline {
         !OSADependencies.json, !**/node_modules/**/*''', fullScanCycle: 10, generatePdfReport: true, groupId: '53', password: '{AQAAABAAAAAQmjNhbGgdCpMZP4oyrcwv38pEN1QExKMCWZ7TLlhmstw=}', preset: '36', projectName: 'Pipeline_Seguridad', sastEnabled: true, serverUrl: 'https://cxprivatecloud.checkmarx.net/', sourceEncoding: '6', useOwnServerCredentials: true, username: '', vulnerabilityThresholdResult: 'FAILURE', waitForResultsEnabled: true])
 	  }
     }
-   stage('Test_Kiuwan') {
-      steps {
-        echo 'Testing Kiuwan...'
-		kiuwan connectionProfileUuid: '5PIH-WqhL',
-			failureThreshold: 40.0,
-			sourcePath: '/',
-			unstableThreshold: 90.0
-	  }
-    }
-   stage('Test_Snyk') {
+    stage('Test_Snyk') {
       steps {
         echo 'Testing Snyk...'
         snykSecurity(
@@ -44,6 +35,17 @@ pipeline {
 	)
       }
     }
+	  
+   stage('Test_Kiuwan') {
+      steps {
+        echo 'Testing Kiuwan...'
+		kiuwan connectionProfileUuid: '5PIH-WqhL',
+			failureThreshold: 10.0,
+			sourcePath: '/',
+			unstableThreshold: 10.0
+	  }
+    }
+
     
     //stage('Deploy') {
       //steps {
