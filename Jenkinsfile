@@ -30,9 +30,8 @@ pipeline {
     stage('Test_Kiuwan') {
       steps {
         echo 'Testing Kiuwan...'
-	kiuwan applicationName: 'PIPELINE_SEGURIDAD', applicationName_dm: 'PIPELINE_SEGURIDAD', 
-		connectionProfileUuid: '5PIH-WqhL', label: '', label_dm: '', measure: 'EFFORT_TO_TARGET', 
-		selectedMode: 'DELIVERY_MODE', sourcePath: '/'
+	      kiuwan applicationName: 'PIPELINE_SEGURIDAD', connectionProfileUuid: '5PIH-WqhL', 
+		      failureThreshold: 98.0, label: '', sourcePath: '/', unstableThreshold: 99.0
 	  }
     }
 	  
