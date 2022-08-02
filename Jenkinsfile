@@ -30,7 +30,7 @@ pipeline {
     stage('Test_Kiuwan') {
       steps {
         echo 'Testing Kiuwan...'
-	      kiuwan applicationName: 'PIPELINE_SEGURIDAD', connectionProfileUuid: '5PIH-WqhL', excludes: '**/src/test/**,**/__MACOSX/**,**/*.min.js,**/*.Designer.vb,**/*.designer.vb,**/*Reference.vb,**/*Service.vb,**/*Silverlight.vb,**/*.Designer.cs,**/*.designer.cs,**/*Reference.cs,**/*Service.cs,**/*Silverlight.cs,**/.*,**/Pods/BuildHeaders/**/*.h,**/Pods/Headers/**/*.h,**/node_modules/**,**/bower_components/**,**/target/**,**/bin/**,**/obj/**,**/dist/**,**/lib/**,**/dev/shm/eic-hostkey-hjihi6wV**,**/etc/dhcp**,**/etc/grub.d**,**/etc/pki/CA/private**', failureThreshold: 96.0, label: '', sourcePath: '/', unstableThreshold: 97.0
+	      kiuwan applicationName: 'PIPELINE_SEGURIDAD', connectionProfileUuid: '5PIH-WqhL', excludes: '**/src/test/**,**/__MACOSX/**,**/*.min.js,**/*.Designer.vb,**/*.designer.vb,**/*Reference.vb,**/*Service.vb,**/*Silverlight.vb,**/*.Designer.cs,**/*.designer.cs,**/*Reference.cs,**/*Service.cs,**/*Silverlight.cs,**/.*,**/Pods/BuildHeaders/**/*.h,**/Pods/Headers/**/*.h,**/node_modules/**,**/bower_components/**,**/target/**,**/bin/**,**/obj/**,**/dist/**,**/lib/**,**/dev/shm/eic-hostkey-hjihi6wV**,**/etc/dhcp**,**/etc/grub.d**,**/etc/pki/CA/private**,**/etc**', failureThreshold: 96.0, label: '', sourcePath: '/', unstableThreshold: 97.0
 	  }
     }
 	  
