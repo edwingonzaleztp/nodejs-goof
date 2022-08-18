@@ -30,7 +30,7 @@ pipeline {
     stage('Test_Kiuwan') {
       steps {
         echo 'Testing Kiuwan...'
-	      kiuwan applicationName: 'PIPELINE_SEGURIDAD', connectionProfileUuid: '5PIH-WqhL', failureThreshold: 95.0, label: '00007', sourcePath: '/home/jenkins/jenkins_slave/workspace/Pipeline_Seguridad', unstableThreshold: 96.0
+	      kiuwan applicationName: 'PIPELINE_SEGURIDAD', connectionProfileUuid: '5PIH-WqhL', failureThreshold: 60.0, label: '00008', sourcePath: '/home/jenkins/jenkins_slave/workspace/Pipeline_Seguridad', unstableThreshold: 96.0
 	  }
     }
 	  
