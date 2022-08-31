@@ -39,7 +39,7 @@ pipeline {
         !**/*.htmls, !**/*.ihtml, !**/*.mht, !**/*.mhtm, !**/*.mhtml, !**/*.ssi, !**/*.stm,
         !**/*.bin,!**/*.lock,!**/*.svg,!**/*.obj,
         !**/*.stml, !**/*.ttml, !**/*.txn, !**/*.xhtm, !**/*.xhtml, !**/*.class, !**/*.iml, !Checkmarx/Reports/*.*,
-        !OSADependencies.json, !**/node_modules/**/*''', fullScanCycle: 10, generatePdfReport: true, groupId: '53', password: '{AQAAABAAAAAQIGtXaXu5hQDCFOpBlr0W7jw5/oRgxO2kh8trDq8Z7RA=}', preset: '36', projectName: 'Pipeline_Seguridad', sastEnabled: true, serverUrl: 'https://cxprivatecloud.checkmarx.net/', sourceEncoding: '6', useOwnServerCredentials: true, username: '', vulnerabilityThresholdResult: 'FAILURE', waitForResultsEnabled: true])
+        !OSADependencies.json, !**/node_modules/**/*'', fullScanCycle: 10, generatePdfReport: true, groupId: '53', password: '{AQAAABAAAAAQIGtXaXu5hQDCFOpBlr0W7jw5/oRgxO2kh8trDq8Z7RA=}', preset: '36', projectName: 'Pipeline_Seguridad', sastEnabled: true, serverUrl: 'https://cxprivatecloud.checkmarx.net/', sourceEncoding: '6', useOwnServerCredentials: true, username: '', vulnerabilityThresholdResult: 'FAILURE', waitForResultsEnabled: true])
     }
   }  
     stage('Test_Kiuwan') {
