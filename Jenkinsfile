@@ -49,7 +49,7 @@ pipeline {
 	  }
     }
 	  
-    stage('Test_Snyk') {
+    stage('Test_Snyk_SCA') {
       steps {
         echo 'Testing Snyk SCA...'
         snykSecurity(
@@ -59,7 +59,7 @@ pipeline {
       }
     }
 	
-    stage('Test_Snyk') {
+    stage('Test_Snyk_SAST') {
      steps {
         echo 'Testing Snyk SAST...'
         snykSecurity(
