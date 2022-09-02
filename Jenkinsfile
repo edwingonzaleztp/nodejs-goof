@@ -51,10 +51,21 @@ pipeline {
 	  
     stage('Test_Snyk') {
       steps {
-        echo 'Testing Snyk...'
+        echo 'Testing Snyk SCA...'
         snykSecurity(
           snykInstallation: 'snyk@latest',
           snykTokenId: 'Id_Snyk_Cred',
+	)
+      }
+    }
+	
+    stage('Test_Snyk') {
+     steps {
+        echo 'Testing Snyk SAST...'
+        snykSecurity(
+          snykInstallation: 'snyk@latest',
+          snykTokenId: 'Id_Snyk_Cred',
+		additionalArguments: '--code'
 	)
       }
     }
