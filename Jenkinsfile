@@ -55,6 +55,7 @@ pipeline {
         snykSecurity(
           snykInstallation: 'snyk@latest',
           snykTokenId: 'Id_Snyk_Cred',
+	  failOnIssues: false
 	)
       }
     }
@@ -65,7 +66,8 @@ pipeline {
         snykSecurity(
           snykInstallation: 'snyk@latest',
           snykTokenId: 'Id_Snyk_Cred',
-		additionalArguments: '--code'
+	  additionalArguments: '--code'
+	  failOnIssues: false
 	)
       }
     }
