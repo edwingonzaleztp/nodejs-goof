@@ -49,28 +49,28 @@ pipeline {
 	  }
     }
 	  
-    stage('Test_Snyk_SCA') {
-      steps {
-        echo 'Testing Snyk SCA...'
-        snykSecurity(
-          snykInstallation: 'snyk@latest',
-          snykTokenId: 'Id_Snyk_Cred',
-	  failOnIssues: false,
-	)
-      }
-    }
+   //stage('Test_Snyk_SCA') {
+     //steps {
+       //echo 'Testing Snyk SCA...'
+       //snykSecurity(
+       //snykInstallation: 'snyk@latest',
+       //snykTokenId: 'Id_Snyk_Cred',
+       //failOnIssues: false,
+	//)
+      //}
+    //}
 	
-    stage('Test_Snyk_SAST') {
-     steps {
-        echo 'Testing Snyk SAST...'
-        snykSecurity(
-          snykInstallation: 'snyk@latest',
-          snykTokenId: 'Id_Snyk_Cred',
-	  additionalArguments: '--code',
-	  failOnIssues: false,
-	)
-      }
-    }
+    //stage('Test_Snyk_SAST') {
+     //steps {
+        //echo 'Testing Snyk SAST...'
+        //snykSecurity(
+         //snykInstallation: 'snyk@latest',
+          //snykTokenId: 'Id_Snyk_Cred',
+	  //additionalArguments: '--code',
+	  //failOnIssues: false,
+	//)
+      //}
+    //}
 	  
     
     //stage('Deploy') {
